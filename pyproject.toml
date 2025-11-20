@@ -1,0 +1,30 @@
+[project]
+name = "Deep3DFaceRecon-pytorch"
+version = "0.1.0"
+description = "Accurate 3D Face Reconstruction with Weakly-Supervised Learning"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "scikit-image",
+    "scipy",
+    "pillow",
+    "matplotlib",
+    "opencv-python",
+    "kornia>=0.5.5",
+    "dominate>=2.6.0",
+    "trimesh>=3.9.20",
+    "nvdiffrast",
+]
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.mat", "*.txt", "*.npz"]
+
